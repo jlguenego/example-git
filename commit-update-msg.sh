@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eau
 
-rm -rf test ||.
+[ -d test ] && rm -rf test
 
 {
   git init test
@@ -12,5 +12,12 @@ rm -rf test ||.
 } >/dev/null
 git log
 
+# Changing the message
 git commit --amend -m c111
 git log
+
+# Changing the content
+echo "Bonjour">b.txt
+git add b.txt
+git commit --amend -m c111
+git log -p
