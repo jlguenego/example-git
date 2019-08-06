@@ -36,19 +36,23 @@ changelog "v0.0.1"
 
 echo a>a.txt
 git add *
-git commit -m "bug #1234: adding a to a.txt"
+git commit -m "issue #1234: adding a to a.txt"
 
 echo b>a.txt
 git add *
-git commit -m "bug #1235: adding b to a.txt
+git commit -m "issue #1235: adding b to a.txt
 
 With a text that should not appear in the changelog
 "
 
 echo c>a.txt
 git add *
-git commit -m "bug #1236: adding c to a.txt"
+git commit -m "issue #1236: adding c to a.txt"
 
 changelog "v0.0.2" "v0.0.1"
+
+set -x
+cat CHANGELOG.md
+
 
 
