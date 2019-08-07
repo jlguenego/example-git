@@ -5,7 +5,7 @@ SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 . "${SOURCE_DIR}/gitlib/base.sh"
 
-clearRepos
+[ -d test ] && rm -rf test
 
 git init test
 cd test
