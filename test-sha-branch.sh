@@ -21,7 +21,3 @@ git checkout -b $COMMIT_ID
 git checkout master
 git checkout $COMMIT_ID
 # see the warning about ambiguity ? ;)
-
-
-
-
